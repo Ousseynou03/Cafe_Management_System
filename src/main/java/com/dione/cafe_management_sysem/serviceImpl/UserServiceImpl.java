@@ -23,8 +23,8 @@ public class UserServiceImpl implements UserService {
     UserDao userDao;
     @Override
     public ResponseEntity<String> signUp(Map<String, String> requestMap) {
-        log.info("Inside signup {}", requestMap);
-        try {
+        log.info("Inside signUp {}", requestMap);
+       try {
 
 
         if (valudateSignUpMap(requestMap)){
@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
                 return CafeUtils.getResponseEntity("Successful Registered", HttpStatus.OK);
             }else {
                 //Vérification si le mail existe déjà.
-                return CafeUtils.getResponseEntity("Emil already exits.", HttpStatus.BAD_REQUEST);
+                return CafeUtils.getResponseEntity("Email already exits.", HttpStatus.BAD_REQUEST);
             }
         }else {
             return CafeUtils.getResponseEntity(CafeConstants.INVALID_DATA, HttpStatus.BAD_REQUEST);

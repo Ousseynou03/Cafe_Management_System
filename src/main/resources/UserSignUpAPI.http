@@ -1,0 +1,11 @@
+POST http://localhost:8087/user/signup
+Accept: application/json
+Content-Type: application/json
+
+
+{
+"name" : "ousseynou",
+"contactNumber" : "0705443903",
+"email" : "dioneousseynou03@gmail.com",
+"password" : "1234"
+}

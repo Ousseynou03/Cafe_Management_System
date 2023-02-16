@@ -20,7 +20,7 @@ public class UserRestImpl implements UserRest {
     @Autowired
     UserService userService;
     @Override
-    public ResponseEntity<String> signup(Map<String, String> requestMap) {
+    public ResponseEntity<String> signUp(Map<String, String> requestMap) {
         try {
             userService.signUp(requestMap);
         }catch (Exception e){

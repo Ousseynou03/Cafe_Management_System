@@ -49,6 +49,7 @@ public class UserServiceImpl implements UserService {
         return CafeUtils.getResponseEntity(CafeConstants.SOMETHING_WEBT_WRONG, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    //Les éléments indispensable avant validation du formulaire d'inscription
     private boolean valudateSignUpMap(Map<String, String> requestMap){
         if (requestMap.containsKey("name") && requestMap.containsKey("contactNumber")  &&
                 requestMap.containsKey("email") && requestMap.containsKey("password")){
